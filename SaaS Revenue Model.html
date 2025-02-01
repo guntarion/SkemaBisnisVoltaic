@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Revenue SaaS</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-light: #dbeafe;
+        --success: #059669;
+        --success-light: #d1fae5;
+        --warning: #d97706;
+        --warning-light: #fef3c7;
+        --info: #6366f1;
+        --info-light: #e0e7ff;
+        --neutral: #4b5563;
+        --bg-light: #f8fafc;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        background-color: var(--bg-light);
+        color: #1f2937;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+
+      h1 {
+        color: var(--primary);
+        text-align: center;
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+      }
+
+      .models-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+      }
+
+      .model-card {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .model-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .icon-container {
+        background: var(--primary-light);
+        color: var(--primary);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+
+      .model-title {
+        flex: 1;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+
+      .model-description {
+        color: var(--neutral);
+        font-size: 0.875rem;
+        margin: 0.5rem 0;
+      }
+
+      .section {
+        margin: 1.5rem 0;
+      }
+
+      .section-title {
+        font-weight: 600;
+        color: var(--neutral);
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+
+      .complexity-low {
+        background: var(--success-light);
+        color: var(--success);
+      }
+      .complexity-medium {
+        background: var(--warning-light);
+        color: var(--warning);
+      }
+      .complexity-high {
+        background: var(--info-light);
+        color: var(--info);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Model Revenue SaaS</h1>
+
+      <div class="models-grid">
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">📅</div>
+            <div class="model-title">
+              <h2>Subscription Based</h2>
+              <p class="model-description">Model berlangganan dengan pembayaran berkala (bulanan/tahunan)</p>
+              <span class="tag complexity-low">Complexity: Low</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>Netflix - langganan streaming bulanan</li>
+              <li>Salesforce - CRM dengan langganan per user</li>
+              <li>Adobe Creative Cloud - suite aplikasi kreatif</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>Pendapatan yang dapat diprediksi</li>
+              <li>Cash flow yang stabil</li>
+              <li>Membangun hubungan jangka panjang</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Perlu effort untuk retention</li>
+              <li>Kompetisi harga yang ketat</li>
+              <li>Initial conversion rate bisa rendah</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">📊</div>
+            <div class="model-title">
+              <h2>Usage Based</h2>
+              <p class="model-description">Biaya berdasarkan actual usage dari layanan atau fitur tertentu</p>
+              <span class="tag complexity-medium">Complexity: Medium</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>AWS - cloud computing berbasis consumption</li>
+              <li>Twilio - API calls pricing</li>
+              <li>Mailchimp - biaya per jumlah email</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>Sangat scalable untuk enterprise</li>
+              <li>Biaya sesuai dengan value yang diterima</li>
+              <li>Barrier to entry rendah untuk user baru</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Pendapatan kurang predictable</li>
+              <li>Kompleksitas dalam billing</li>
+              <li>Perlu monitoring usage yang akurat</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">🎯</div>
+            <div class="model-title">
+              <h2>Tiered Pricing</h2>
+              <p class="model-description">Beberapa tingkat layanan dengan fitur dan harga berbeda</p>
+              <span class="tag complexity-medium">Complexity: Medium</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>Slack - free/pro/enterprise tiers</li>
+              <li>Zoom - basic/pro/business plans</li>
+              <li>GitHub - free/team/enterprise</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>Bisa melayani berbagai segmen pasar</li>
+              <li>Upsell path yang jelas</li>
+              <li>Fleksibilitas dalam positioning</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Kompleksitas dalam product development</li>
+              <li>Potensi cannibalization antar tier</li>
+              <li>Perlu komunikasi value proposition yang jelas</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">🎁</div>
+            <div class="model-title">
+              <h2>Freemium</h2>
+              <p class="model-description">Layanan dasar gratis dengan opsi upgrade ke fitur premium</p>
+              <span class="tag complexity-high">Complexity: High</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>Spotify - free dengan ads, premium tanpa ads</li>
+              <li>Dropbox - storage gratis terbatas</li>
+              <li>LinkedIn - basic/premium features</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>User acquisition yang lebih mudah</li>
+              <li>Product virality potential</li>
+              <li>Data insights dari free users</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Conversion rate ke premium bisa rendah</li>
+              <li>Cost serving free users</li>
+              <li>Perlu balance free vs premium features</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">👥</div>
+            <div class="model-title">
+              <h2>Per-Seat Pricing</h2>
+              <p class="model-description">Biaya berdasarkan jumlah pengguna aktif dalam organisasi</p>
+              <span class="tag complexity-low">Complexity: Low</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>Microsoft 365 - per user licensing</li>
+              <li>Notion - team member pricing</li>
+              <li>Jira - per user billing</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>Model yang simple dan transparan</li>
+              <li>Scaling revenue dengan pertumbuhan customer</li>
+              <li>Mudah dipahami customer</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Bisa mahal untuk tim besar</li>
+              <li>Potential untuk sharing accounts</li>
+              <li>Kompetisi harga per-seat yang ketat</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="model-card">
+          <div class="model-header">
+            <div class="icon-container">🔄</div>
+            <div class="model-title">
+              <h2>Hybrid/Custom</h2>
+              <p class="model-description">Kombinasi dari berbagai model pricing sesuai kebutuhan spesifik</p>
+              <span class="tag complexity-high">Complexity: High</span>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Contoh Penerapan</div>
+            <ul>
+              <li>HubSpot - kombinasi seats dan usage</li>
+              <li>New Relic - hybrid consumption model</li>
+              <li>Stripe - usage + flat fee</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Kelebihan</div>
+            <ul>
+              <li>Fleksibilitas maksimal</li>
+              <li>Bisa mengoptimalkan berbagai revenue stream</li>
+              <li>Cocok untuk enterprise solutions</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Tantangan</div>
+            <ul>
+              <li>Kompleksitas dalam billing dan operasional</li>
+              <li>Potensi membingungkan customer</li>
+              <li>Effort lebih dalam sales dan support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

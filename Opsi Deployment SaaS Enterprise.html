@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SaaS Deployment Options</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-light: #dbeafe;
+        --success: #059669;
+        --success-light: #d1fae5;
+        --warning: #d97706;
+        --warning-light: #fef3c7;
+        --danger: #dc2626;
+        --danger-light: #fee2e2;
+        --neutral: #4b5563;
+        --bg-light: #f8fafc;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 2rem;
+        background-color: var(--bg-light);
+        color: #1f2937;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+
+      h1 {
+        color: var(--primary);
+        text-align: center;
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+      }
+
+      .options-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .option-card {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 1.5rem;
+        border: 1px solid #e5e7eb;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .option-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .icon-container {
+        background: var(--primary-light);
+        color: var(--primary);
+        width: 3rem;
+        height: 3rem;
+        border-radius: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        margin: 0;
+        font-size: 1.25rem;
+        color: var(--primary);
+      }
+
+      .section {
+        margin: 1.25rem 0;
+      }
+
+      .section-title {
+        font-weight: 600;
+        color: var(--neutral);
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      .deployment-table {
+        width: 100%;
+        margin-top: 2rem;
+        border-collapse: collapse;
+      }
+
+      .deployment-table th,
+      .deployment-table td {
+        padding: 1rem;
+        border: 1px solid #e5e7eb;
+        font-size: 0.875rem;
+      }
+
+      .deployment-table th {
+        background: var(--primary-light);
+        color: var(--primary);
+        text-align: left;
+      }
+
+      .tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin: 0.25rem;
+      }
+
+      .security-high {
+        background: var(--success-light);
+        color: var(--success);
+      }
+      .security-medium {
+        background: var(--warning-light);
+        color: var(--warning);
+      }
+      .security-low {
+        background: var(--danger-light);
+        color: var(--danger);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .note-box {
+        background: var(--primary-light);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      .note-box-title {
+        font-weight: 600;
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Opsi Deployment SaaS Enterprise</h1>
+
+      <div class="options-grid">
+        <div class="option-card">
+          <div class="option-header">
+            <div class="icon-container">☁️</div>
+            <h2>Full Cloud</h2>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Karakteristik</div>
+            <ul>
+              <li>Semua komponen di cloud (aplikasi, data, AI)</li>
+              <li>Menggunakan managed services</li>
+              <li>Data center bisa dipilih per region</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Best For</div>
+            <ul>
+              <li>Startup dan SME</li>
+              <li>Data non-sensitif</li>
+              <li>Kebutuhan scaling cepat</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Considerations</div>
+            <ul>
+              <li>Cost predictable tapi bisa tinggi</li>
+              <li>Ketergantungan pada provider</li>
+              <li>Potential compliance issues</li>
+            </ul>
+          </div>
+
+          <span class="tag security-medium">Security: Medium</span>
+          <span class="tag security-high">Scalability: High</span>
+          <span class="tag security-high">Maintenance: Easy</span>
+        </div>
+
+        <div class="option-card">
+          <div class="option-header">
+            <div class="icon-container">🏢</div>
+            <h2>Full On-Premise</h2>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Karakteristik</div>
+            <ul>
+              <li>Semua komponen di lokasi klien</li>
+              <li>Kontrol penuh atas infrastruktur</li>
+              <li>Private network isolation</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Best For</div>
+            <ul>
+              <li>Enterprise dengan data sangat sensitif</li>
+              <li>Regulasi ketat (banking, healthcare)</li>
+              <li>Kebutuhan latency minimal</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Considerations</div>
+            <ul>
+              <li>Initial cost tinggi</li>
+              <li>Butuh tim IT internal yang kuat</li>
+              <li>Maintenance lebih kompleks</li>
+            </ul>
+          </div>
+
+          <span class="tag security-high">Security: High</span>
+          <span class="tag security-medium">Scalability: Medium</span>
+          <span class="tag security-low">Maintenance: Complex</span>
+        </div>
+
+        <div class="option-card">
+          <div class="option-header">
+            <div class="icon-container">🔄</div>
+            <h2>Hybrid Deployment</h2>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Karakteristik</div>
+            <ul>
+              <li>Frontend/UI di cloud</li>
+              <li>Data sensitif & AI on-premise</li>
+              <li>Microservices architecture</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Best For</div>
+            <ul>
+              <li>Balance security & scalability</li>
+              <li>Specific data residency requirements</li>
+              <li>Mixed workload characteristics</li>
+            </ul>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Considerations</div>
+            <ul>
+              <li>Kompleksitas integrasi</li>
+              <li>Network latency management</li>
+              <li>Multiple environments maintenance</li>
+            </ul>
+          </div>
+
+          <span class="tag security-high">Security: High</span>
+          <span class="tag security-high">Scalability: High</span>
+          <span class="tag security-medium">Maintenance: Moderate</span>
+        </div>
+      </div>
+
+      <table class="deployment-table">
+        <tr>
+          <th>Component</th>
+          <th>Full Cloud</th>
+          <th>Full On-Premise</th>
+          <th>Hybrid</th>
+        </tr>
+        <tr>
+          <td><strong>Frontend (Next.js)</strong></td>
+          <td>Cloud (Vercel, AWS)</td>
+          <td>Local Server</td>
+          <td>Cloud (Vercel, AWS)</td>
+        </tr>
+        <tr>
+          <td><strong>Database</strong></td>
+          <td>Managed DB Service</td>
+          <td>Local DB Server</td>
+          <td>Local DB Server</td>
+        </tr>
+        <tr>
+          <td><strong>AI Models</strong></td>
+          <td>Cloud GPU Instances</td>
+          <td>Local GPU Server</td>
+          <td>Local GPU Server</td>
+        </tr>
+        <tr>
+          <td><strong>File Storage</strong></td>
+          <td>Cloud Storage</td>
+          <td>Local Storage</td>
+          <td>Hybrid (by data type)</td>
+        </tr>
+        <tr>
+          <td><strong>Cache Layer</strong></td>
+          <td>Managed Cache</td>
+          <td>Local Cache</td>
+          <td>Distributed Cache</td>
+        </tr>
+      </table>
+
+      <div class="note-box">
+        <div class="note-box-title">Rekomendasi untuk Data Sensitif</div>
+        <p>Untuk kasus dengan sensitivitas data tinggi dan requirement lokasi server di Indonesia, pendekatan yang disarankan:</p>
+        <ul>
+          <li>Frontend/UI: Bisa di-deploy di cloud (Vercel/AWS) untuk kemudahan maintenance dan scaling</li>
+          <li>Database & Sensitive Data: On-premise atau datacenter lokal yang compliance</li>
+          <li>AI Operations: On-premise dengan Docker + Ollama untuk kontrol penuh</li>
+          <li>Network: VPN/Private Network untuk koneksi frontend-backend</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

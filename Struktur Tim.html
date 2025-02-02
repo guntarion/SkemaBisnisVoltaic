@@ -114,16 +114,19 @@
       .daily {
         background-color: #fef3c7;
         color: #92400e;
+        margin-bottom: 2rem;
       }
 
       .periodic {
         background-color: #dbeafe;
         color: #1e40af;
+        margin-bottom: 2rem;
       }
 
       .as-needed {
         background-color: #f3f4f6;
         color: #374151;
+        margin-bottom: 2rem;
       }
 
       .note {
@@ -137,61 +140,61 @@
   </head>
   <body>
     <div class="container">
-      <h1>Struktur Tim & Tanggung Jawab</h1>
+      <h1>Struktur Tim: Aspek Teknis</h1>
 
       <div class="grid">
         <div class="card">
+          <span class="tag daily">Tim Inti Guntar</span>
           <div class="card-header">
             <div class="icon core">🔒</div>
-            <h2>Tim Inti (In-House)</h2>
+            <h2>Layanan Utama</h2>
           </div>
           <ul>
             <li><strong>AI/ML Engineer:</strong> Pengelolaan model, optimasi performa</li>
-            <li><strong>UI/UX Development:</strong> Frontend updates</li>
+            <li><strong>UI/UX Development:</strong> Frontend development & updates</li>
             <li><strong>Backend Developer:</strong> API, integrasi sistem</li>
+            <li><strong>Feature Enhancement:</strong> Non-critical updates</li>
             <li><strong>DevOps/SRE:</strong> Infrastructure, deployment, security</li>
           </ul>
-          <span class="tag daily">Daily Operations</span>
         </div>
 
         <div class="card">
+          <span class="tag as-needed">Tim Outsource</span>
+          <div class="card-header">
+            <div class="icon optional">⭐</div>
+            <h2>Layanan Tambahan</h2>
+          </div>
+
+          <ul>
+            <li><strong>Basic Maintenance:</strong> Backup, troubleshooting dasar</li>
+
+            <li><strong>Analytics & Reporting:</strong> Usage metrics, trends</li>
+            <li><strong>Security Audit:</strong> Penetration testing, compliance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag periodic">PROXSIS or similar</span>
+          <div class="card-header">
+            <div class="icon external">🤝</div>
+            <h2>Support</h2>
+          </div>
+          <ul>
+            <li><strong>Documentation:</strong> Technical docs, training materials</li>
+            <li><strong>Training & Support:</strong> User training, help desk L1</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="tag as-needed">IT Klien</span>
           <div class="card-header">
             <div class="icon client">👥</div>
-            <h2>Dapat Didelegasikan ke Klien</h2>
+            <h2>Manajemen</h2>
           </div>
           <ul>
             <li><strong>System Monitoring:</strong> Resource tracking, basic health checks</li>
             <li><strong>User Management:</strong> Account & access control</li>
-            <li><strong>Basic Maintenance:</strong> Backup, troubleshooting dasar</li>
           </ul>
-          <span class="tag periodic">Weekly Tasks</span>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <div class="icon external">🤝</div>
-            <h2>Dapat Di-outsource</h2>
-          </div>
-          <ul>
-            <li><strong>Security Audit:</strong> Penetration testing, compliance</li>
-
-            <li><strong>Documentation:</strong> Technical docs, training materials</li>
-            <li><strong>Training & Support:</strong> User training, help desk L1</li>
-          </ul>
-          <span class="tag as-needed">As Needed</span>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <div class="icon optional">⭐</div>
-            <h2>Opsional/Dapat Ditunda</h2>
-          </div>
-          <ul>
-            <li><strong>Analytics & Reporting:</strong> Usage metrics, trends</li>
-            <li><strong>Feature Enhancement:</strong> Non-critical updates</li>
-            <li><strong>Additional Integrations:</strong> Nice-to-have features</li>
-          </ul>
-          <span class="tag as-needed">Future Development</span>
         </div>
       </div>
 

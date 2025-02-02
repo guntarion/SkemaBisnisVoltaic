@@ -21,9 +21,6 @@ function initHeader() {
   nav.innerHTML = `
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="Struktur Tim.html">Team Structure</a></li>
-      <li><a href="SaaS Revenue Model.html">Revenue Models</a></li>
-      <li><a href="Opsi Deployment SaaS Enterprise.html">Deployment Options</a></li>
     </ul>
   `;
 

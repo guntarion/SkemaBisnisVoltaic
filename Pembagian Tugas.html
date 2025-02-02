@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Division - Voltaic Innovation Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <style>
+      :root {
+        --primary-color: #2563eb;
+        --secondary-color: #1e40af;
+        --success-color: #059669;
+        --warning-color: #d97706;
+        --danger-color: #dc2626;
+        --text-color: #1f2937;
+        --bg-light: #f3f4f6;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        margin: 0;
+        padding: 2rem;
+        background-color: var(--bg-light);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+
+      h1 {
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2.25rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e5e7eb;
+      }
+
+      .section h2 {
+        color: var(--primary-color);
+        margin-top: 0;
+        border-bottom: 2px solid var(--primary-color);
+        padding-bottom: 0.5rem;
+      }
+
+      .task-list {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .task-item {
+        margin-bottom: 1rem;
+        padding: 1rem;
+        background-color: #f8fafc;
+        border-radius: 0.25rem;
+        border-left: 4px solid var(--primary-color);
+      }
+
+      .task-item h3 {
+        margin: 0 0 0.5rem 0;
+        color: var(--secondary-color);
+      }
+
+      .task-item p {
+        margin: 0;
+        color: var(--text-color);
+      }
+
+      .responsibility-tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        font-weight: 500;
+        margin: 0.5rem 0.5rem 0.5rem 0;
+      }
+
+      .primary {
+        background-color: #dbeafe;
+        color: var(--secondary-color);
+      }
+
+      .secondary {
+        background-color: #fef3c7;
+        color: #92400e;
+      }
+
+      .support {
+        background-color: #dcfce7;
+        color: #166534;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pembagian Tugas - Kemitraan Proyek</h1>
+
+      <div class="section">
+        <h2>A. TANGGUNG JAWAB PERUSAHAAN ANDA</h2>
+
+        <div class="task-item">
+          <h3>1. Manajemen Hubungan Klien</h3>
+          <span class="responsibility-tag primary">Business Development</span>
+          <ul>
+            <li>Pencarian dan akuisisi klien potensial</li>
+            <li>Presentasi dan demo produk ke klien</li>
+            <li>Negosiasi kontrak dan harga</li>
+            <li>Pengelolaan ekspektasi klien</li>
+            <li>Penanganan keluhan tingkat pertama</li>
+            <li>Pembuatan dan pengiriman proposal</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>2. Manajemen Proyek</h3>
+          <span class="responsibility-tag primary">Project Management</span>
+          <ul>
+            <li>Perencanaan timeline dan milestone</li>
+            <li>Koordinasi dengan pihak ketiga</li>
+            <li>Monitoring progress proyek</li>
+            <li>Pengelolaan risiko proyek</li>
+            <li>Pelaporan status ke stakeholders</li>
+            <li>Quality assurance dari sisi bisnis</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>3. Manajemen Keuangan</h3>
+          <span class="responsibility-tag primary">Financial Management</span>
+          <ul>
+            <li>Penentuan struktur harga</li>
+            <li>Penagihan ke klien</li>
+            <li>Pembayaran ke pihak ketiga</li>
+            <li>Pengelolaan margin dan profit</li>
+            <li>Monitoring penggunaan resources</li>
+            <li>Pengelolaan budget proyek</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>4. Dokumentasi Bisnis</h3>
+          <span class="responsibility-tag primary">Documentation</span>
+          <ul>
+            <li>Pembuatan dokumen kontrak</li>
+            <li>Pembuatan SLA (Service Level Agreement)</li>
+            <li>Dokumentasi requirement bisnis</li>
+            <li>Pembuatan laporan performa</li>
+            <li>Dokumentasi feedback klien</li>
+            <li>Pembuatan manual operasional</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>5. Support Level 1</h3>
+          <span class="responsibility-tag primary">Customer Support</span>
+          <ul>
+            <li>Penerimaan ticket support</li>
+            <li>Filtering dan kategorisasi masalah</li>
+            <li>Penyelesaian masalah non-teknis</li>
+            <li>Eskalasi masalah teknis ke pihak ketiga</li>
+            <li>Monitoring status ticket</li>
+            <li>Follow-up penyelesaian</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>B. TANGGUNG JAWAB PIHAK KETIGA (MITRA PENGEMBANG)</h2>
+
+        <div class="task-item">
+          <h3>1. Pengembangan Teknis</h3>
+          <span class="responsibility-tag secondary">Technical Development</span>
+          <ul>
+            <li>Pengembangan aplikasi frontend</li>
+            <li>Pengembangan aplikasi backend</li>
+            <li>Integrasi sistem</li>
+            <li>Pengembangan fitur AI</li>
+            <li>Optimasi performa sistem</li>
+            <li>Testing dan debugging</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>2. Infrastruktur & Deployment</h3>
+          <span class="responsibility-tag secondary">Infrastructure</span>
+          <ul>
+            <li>Setup dan konfigurasi server</li>
+            <li>Manajemen database</li>
+            <li>Konfigurasi keamanan</li>
+            <li>Monitoring sistem</li>
+            <li>Backup dan recovery</li>
+            <li>Deployment dan updates</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>3. AI Development</h3>
+          <span class="responsibility-tag secondary">AI Development</span>
+          <ul>
+            <li>Pengembangan dan optimasi prompt</li>
+            <li>Fine-tuning model AI</li>
+            <li>Integrasi API AI</li>
+            <li>Monitoring penggunaan AI</li>
+            <li>Optimasi performa AI</li>
+            <li>Update model dan prompt</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>4. Technical Support</h3>
+          <span class="responsibility-tag secondary">Technical Support</span>
+          <ul>
+            <li>Penanganan masalah teknis</li>
+            <li>Troubleshooting sistem</li>
+            <li>Perbaikan bug</li>
+            <li>Optimasi performa</li>
+            <li>Pemeliharaan sistem</li>
+            <li>Support level 2 dan 3</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>5. Dokumentasi Teknis</h3>
+          <span class="responsibility-tag secondary">Technical Documentation</span>
+          <ul>
+            <li>Dokumentasi kode</li>
+            <li>Dokumentasi API</li>
+            <li>Dokumentasi sistem</li>
+            <li>Manual technical support</li>
+            <li>Dokumentasi infrastruktur</li>
+            <li>Update dokumentasi teknis</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>6. Training & Knowledge Transfer</h3>
+          <span class="responsibility-tag secondary">Training</span>
+          <ul>
+            <li>Pelatihan pengguna</li>
+            <li>Pelatihan tim support level 1</li>
+            <li>Pembuatan materi training</li>
+            <li>Transfer knowledge teknis</li>
+            <li>Workshop dan webinar</li>
+            <li>Dokumentasi best practices</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>C. AREA KOLABORASI</h2>
+
+        <div class="task-item">
+          <h3>1. Perencanaan Proyek</h3>
+          <span class="responsibility-tag support">Collaboration</span>
+          <ul>
+            <li>Perusahaan: Definisi kebutuhan bisnis</li>
+            <li>Pihak Ketiga: Asesmen teknis</li>
+            <li>Bersama: Timeline dan deliverables</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>2. Quality Assurance</h3>
+          <span class="responsibility-tag support">Collaboration</span>
+          <ul>
+            <li>Perusahaan: Testing fungsional</li>
+            <li>Pihak Ketiga: Testing teknis</li>
+            <li>Bersama: User Acceptance Testing</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>3. Manajemen Perubahan</h3>
+          <span class="responsibility-tag support">Collaboration</span>
+          <ul>
+            <li>Perusahaan: Analisis dampak bisnis</li>
+            <li>Pihak Ketiga: Analisis dampak teknis</li>
+            <li>Bersama: Implementasi perubahan</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>4. Penanganan Krisis</h3>
+          <span class="responsibility-tag support">Collaboration</span>
+          <ul>
+            <li>Perusahaan: Komunikasi dengan klien</li>
+            <li>Pihak Ketiga: Resolusi teknis</li>
+            <li>Bersama: Root cause analysis</li>
+          </ul>
+        </div>
+
+        <div class="task-item">
+          <h3>5. Continuous Improvement</h3>
+          <span class="responsibility-tag support">Collaboration</span>
+          <ul>
+            <li>Perusahaan: Feedback bisnis</li>
+            <li>Pihak Ketiga: Rekomendasi teknis</li>
+            <li>Bersama: Roadmap pengembangan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

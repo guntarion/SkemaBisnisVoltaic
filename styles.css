@@ -73,9 +73,61 @@ nav a.active {
   font-weight: 600;
 }
 
+/* Overview Styles */
+.overview {
+  margin-bottom: 3rem;
+}
+
+.overview h3 {
+  color: var(--primary);
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.quote {
+  font-style: italic;
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.overview-links {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.link-item:hover {
+  color: var(--primary-dark);
+  background: var(--primary-light);
+}
+
+.link-item i {
+  font-size: 1.25rem;
+}
+
 /* Main Content Container */
 .container {
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* For non-hero sections container */
+body > .container {
   margin: 2rem auto;
   padding: 2rem;
   background: white;
@@ -104,6 +156,18 @@ nav a.active {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: block;
+  transition: transform 0.2s;
+}
+
+.card:hover .card-icon {
+  transform: scale(1.1);
 }
 
 .card h3 {

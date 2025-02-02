@@ -7,136 +7,255 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="header.js"></script>
     <style>
-      :root {
-        --primary: #2563eb;
-        --primary-light: #dbeafe;
-        --success: #059669;
-        --success-light: #d1fae5;
-        --warning: #d97706;
-        --warning-light: #fef3c7;
-        --info: #6366f1;
-        --info-light: #e0e7ff;
-        --neutral: #4b5563;
-        --bg-light: #f8fafc;
-      }
+        :root {
+         --primary: #2563eb;
+          --primary-light: #dbeafe;
+           --success: #059669;
+          --success-light: #d1fae5;
+          --warning: #d97706;
+          --warning-light: #fef3c7;
+          --info: #6366f1;
+          --info-light: #e0e7ff;
+          --danger: #dc2626;
+          --danger-light: #fee2e2;0e7ff;
+          --neutral: #4b5563;
+          --bg-light: #f8fafc;
+        }
+
 
       body {
-        font-family: system-ui, -apple-system, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 2rem;
-        background-color: var(--bg-light);
-        color: #1f2937;
-      }
+          font-family: system-ui, -apple-system, sans-serif;
+          line-height: 1.6;
+          margin: 0;
+          padding: 2rem;
+          background-color: var(--bg-light);
+          color: #1f2937;
+        }
 
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-      }
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          background: white;
+          border-radius: 1rem;
+          padding: 2rem;
+          box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
 
-      h1 {
-        color: var(--primary);
-        text-align: center;
-        font-size: 2.25rem;
-        margin-bottom: 2rem;
-      }
 
-      .models-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-      }
+        h1 {
+          color: var(--primary);
+          text-align: center;
+          font-size: 2.25rem;
+          margin-bottom: 2rem;
+        }
 
-      .model-card {
-        background: white;
-        border-radius: 0.75rem;
-        padding: 1.5rem;
-        border: 1px solid #e5e7eb;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-      }
+        .models-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 2rem;
+        }
 
-      .model-header {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-      }
+       .model-card {
+          background: white;
+          border-radius: 0.75rem;
+          padding: 1.5rem;
+          border: 1px solid #e5e7eb;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+          margin-bottom: 2rem;
+          transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
 
-      .icon-container {
-        background: var(--primary-light);
-        color: var(--primary);
-        width: 3rem;
-        height: 3rem;
-        border-radius: 0.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-      }
+        .model-card:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+        }
 
-      .model-title {
-        flex: 1;
-      }
+        .implementation-section {
+          margin-top: 1.5rem;
+          padding: 1rem;
+          background-color: var(--primary-light);
+          border-radius: 0.5rem;
+        }
 
-      h2 {
-        margin: 0;
-        font-size: 1.25rem;
-        color: var(--primary);
-      }
+        .considerations-section {
+          margin-top: 1.5rem;
+          padding: 1rem;
+          background-color: var(--warning-light);
+          border-radius: 0.5rem;
+        }
 
-      .model-description {
-        color: var(--neutral);
-        font-size: 0.875rem;
-        margin: 0.5rem 0;
-      }
+        .consideration-item {
+          margin-bottom: 1.5rem;
+        }
 
-      .section {
-        margin: 1.5rem 0;
-      }
+        .consideration-title {
+          font-weight: 600;
+          color: var(--warning);
+          margin-bottom: 0.5rem;
+        }
 
-      .section-title {
-        font-weight: 600;
-        color: var(--neutral);
-        margin-bottom: 0.5rem;
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
+        .mitigation-list {
+          margin-left: 1.5rem;
+          margin-top: 0.5rem;
+        }
 
-      ul {
-        margin: 0;
-        padding-left: 1.5rem;
-      }
+        .section-badge {
+          display: inline-block;
+          padding: 0.25rem 0.75rem;
+          border-radius: 0.375rem;
+          font-size: 0.75rem;
+          font-weight: 500;
+          margin-bottom: 0.75rem;
+        }
 
-      li {
-        margin-bottom: 0.5rem;
-        font-size: 0.875rem;
-      }
+        .implementation-badge {
+          background-color: var(--primary);
+          color: white;
+        }
 
-      .tag {
-        display: inline-block;
-        padding: 0.25rem 0.75rem;
-        border-radius: 9999px;
-        font-size: 0.75rem;
-        font-weight: 500;
-      }
+        .considerations-badge {
+          background-color: var(--warning);
+          color: white;
+        }
 
-      .complexity-low {
-        background: var(--success-light);
-        color: var(--success);
-      }
-      .complexity-medium {
-        background: var(--warning-light);
-        color: var(--warning);
-      }
-      .complexity-high {
-        background: var(--info-light);
-        color: var(--info);
-      }
+        .expandable-section {
+          cursor: pointer;
+        }
+
+        .expandable-content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease-out;
+          opacity: 0;
+        }
+
+        .expandable-content.expanded {
+          max-height: 1000px; /* High enough to contain content */
+          opacity: 1;
+          transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
+        }
+
+        .expand-icon {
+          float: right;
+          font-size: 1.25rem;
+          transition: transform 0.3s ease;
+          display: inline-block;
+        }
+
+        .expanded .expand-icon {
+          transform: rotate(180deg);
+        }
+
+        /* Adjust grid for larger cards */
+        .models-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+          gap: 2rem;
+        }
+        .model-card {
+          background: white;
+          border-radius: 0.75rem;
+          padding: 1.5rem;
+          border: 1px solid #e5e7eb;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .model-header {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .icon-container {
+          background: var(--primary-light);
+          color: var(--primary);
+          width: 3rem;
+          height: 3rem;
+          border-radius: 0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.5rem;
+        }
+
+        .model-title {
+          flex: 1;
+        }
+
+        h2 {
+          margin: 0;
+          font-size: 1.25rem;
+          color: var(--primary);
+        }
+
+        .model-description {
+          color: var(--neutral);
+          font-size: 0.875rem;
+          margin: 0.5rem 0;
+        }
+
+        .section {
+          margin: 1.5rem 0;
+        }
+
+        .section-title {
+          font-weight: 600;
+          color: var(--neutral);
+          margin-bottom: 0.5rem;
+          font-size: 0.875rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+
+        ul {
+          margin: 0;
+          padding-left: 1.5rem;
+        }
+
+        li {
+          margin-bottom: 0.5rem;
+          font-size: 0.875rem;
+        }
+
+        /* Tag styles to update */
+        .tag {
+          display: inline-block;
+          padding: 0.25rem 0.75rem;
+          border-radius: 9999px;
+          font-size: 0.75rem;
+          font-weight: 500;
+          border: 1px solid transparent; /* Add border for better visibility */
+        }
+
+        .complexity-low {
+          background-color: var(--success-light);
+          color: var(--success);
+          border-color: var(--success);
+        }
+
+        .complexity-medium {
+          background-color: var(--warning-light);
+          color: var(--warning);
+          border-color: var(--warning);
+        }
+
+        .complexity-high {
+          background-color: var(--info-light);
+          color: var(--info);
+          border-color: var(--info);
+        }
+
+        /* Additional responsive adjustments */
+        @media (max-width: 768px) {
+          .models-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .model-card {
+            margin-bottom: 1.5rem;
+          }
+        }
     </style>
   </head>
   <body>
@@ -144,16 +263,19 @@
       <h1>Model Revenue SaaS</h1>
 
       <div class="models-grid">
+        <!-- Subscription Based -->
         <div class="model-card">
+          <!-- Previous content remains the same -->
           <div class="model-header">
             <div class="icon-container">📅</div>
             <div class="model-title">
               <h2>Subscription Based</h2>
-              <p class="model-description">Model berlangganan dengan pembayaran berkala (bulanan/tahunan)</p>
+              <p class="model-description">Pembayaran berkala (bulanan/tahunan)</p>
               <span class="tag complexity-low">Complexity: Low</span>
             </div>
           </div>
 
+          <!-- Existing sections -->
           <div class="section">
             <div class="section-title">Contoh Penerapan</div>
             <ul>
@@ -172,16 +294,54 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Perlu effort untuk retention</li>
-              <li>Kompetisi harga yang ketat</li>
-              <li>Initial conversion rate bisa rendah</li>
-            </ul>
+          <!-- New Implementation Section -->
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Paket Basic: Akses ke Problem Space dan Solution Space modules</li>
+                <li>Paket Professional: Tambahan Business Analysis dan Literature Review</li>
+                <li>Paket Enterprise: Full access dengan custom AI model settings</li>
+                <li>Bundle dengan training sebagai "onboarding package"</li>
+                <li>Opsi subscription khusus untuk periode kompetisi</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- New Considerations Section -->
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">Seasonality Impact</div>
+                <p>Problem: Penggunaan tidak stabil karena sifat kompetisi yang musiman</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Penawaran paket khusus musim kompetisi</li>
+                    <li>Fokus pada fitur non-kompetisi</li>
+                    <li>Program retensi dengan insentif</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Training Integration</div>
+                <p>Problem: Kompleksitas bundling subscription dengan training</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Paket modular yang bisa dipisah atau digabung</li>
+                    <li>Sistem kredit training yang fleksibel</li>
+                    <li>Opsi training subscription terpisah</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Usage Based -->
         <div class="model-card">
           <div class="model-header">
             <div class="icon-container">📊</div>
@@ -210,16 +370,53 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Pendapatan kurang predictable</li>
-              <li>Kompleksitas dalam billing</li>
-              <li>Perlu monitoring usage yang akurat</li>
-            </ul>
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Pay-per-document untuk makalah kompetisi</li>
+                <li>Token-based system untuk AI interactions</li>
+                <li>Credit system untuk literature review</li>
+                <li>Bulk purchase options untuk enterprise</li>
+                <li>Premium rate untuk advanced AI models</li>
+                <li>Package deals untuk kompetisi season</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">Cost Tracking</div>
+                <p>Problem: Sulit memprediksi biaya bagi klien</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Usage dashboard real-time</li>
+                    <li>Alert system untuk quota</li>
+                    <li>Budget cap option</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Billing Complexity</div>
+                <p>Problem: Sistem billing yang kompleks untuk usage-based</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Simplified billing cycles</li>
+                    <li>Bundled credits system</li>
+                    <li>Automated billing reports</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Tiered Pricing -->
         <div class="model-card">
           <div class="model-header">
             <div class="icon-container">🎯</div>
@@ -248,16 +445,52 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Kompleksitas dalam product development</li>
-              <li>Potensi cannibalization antar tier</li>
-              <li>Perlu komunikasi value proposition yang jelas</li>
-            </ul>
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Basic Tier: Problem documentation dan basic AI assistance</li>
+                <li>Professional Tier: Full modules dengan standard AI models</li>
+                <li>Enterprise Tier: Custom AI models, priority support</li>
+                <li>Competition Tier: Specialized features</li>
+                <li>Training Bundle Tier: Software + training package</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">Feature Differentiation</div>
+                <p>Problem: Membuat perbedaan value yang jelas antar tier</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Value matrix yang jelas</li>
+                    <li>Feature discovery system</li>
+                    <li>Upgrade path yang logis</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Development Complexity</div>
+                <p>Problem: Maintain multiple versions untuk different tiers</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Modular architecture</li>
+                    <li>Feature flags system</li>
+                    <li>Clear development roadmap</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Freemium -->
         <div class="model-card">
           <div class="model-header">
             <div class="icon-container">🎁</div>
@@ -286,16 +519,52 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Conversion rate ke premium bisa rendah</li>
-              <li>Cost serving free users</li>
-              <li>Perlu balance free vs premium features</li>
-            </ul>
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Free: Problem documentation dengan basic AI assistance</li>
+                <li>Basic templates dan limited AI interactions</li>
+                <li>View-only access untuk knowledge base</li>
+                <li>Community support only</li>
+                <li>Limited storage dan document generation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">Server Cost</div>
+                <p>Problem: Biaya operasional untuk free users</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Limit fitur yang resource-intensive</li>
+                    <li>Cache optimization</li>
+                    <li>Usage quotas</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Conversion Strategy</div>
+                <p>Problem: Converting free users ke paying customers</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Clear upgrade triggers</li>
+                    <li>Value demonstration</li>
+                    <li>Limited-time premium trials</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Per-Seat Pricing -->
         <div class="model-card">
           <div class="model-header">
             <div class="icon-container">👥</div>
@@ -324,16 +593,52 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Bisa mahal untuk tim besar</li>
-              <li>Potential untuk sharing accounts</li>
-              <li>Kompetisi harga per-seat yang ketat</li>
-            </ul>
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Team-based licensing dengan flexible seat allocation</li>
+                <li>Role-based pricing (admin, author, reviewer)</li>
+                <li>Shared resource pools untuk tim</li>
+                <li>Project-based seat allocation</li>
+                <li>Department-level management</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">Account Sharing</div>
+                <p>Problem: Users sharing single account</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Session monitoring</li>
+                    <li>IP tracking</li>
+                    <li>Concurrent usage limits</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Cost Scaling</div>
+                <p>Problem: Biaya tinggi untuk tim besar</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Volume discounts</li>
+                    <li>Team package options</li>
+                    <li>Resource sharing features</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
+        <!-- Hybrid/Custom -->
         <div class="model-card">
           <div class="model-header">
             <div class="icon-container">🔄</div>
@@ -362,16 +667,91 @@
             </ul>
           </div>
 
-          <div class="section">
-            <div class="section-title">Tantangan</div>
-            <ul>
-              <li>Kompleksitas dalam billing dan operasional</li>
-              <li>Potensi membingungkan customer</li>
-              <li>Effort lebih dalam sales dan support</li>
-            </ul>
+          <div class="implementation-section expandable-section">
+            <span class="section-badge implementation-badge">Penerapan Voltaic AI</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <ul>
+                <li>Base subscription + usage-based premium features</li>
+                <li>Team subscription dengan individual usage quotas</li>
+                <li>Enterprise agreements dengan custom service levels</li>
+                <li>Training integration packages</li>
+                <li>Custom AI model deployment options</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="considerations-section expandable-section">
+            <span class="section-badge considerations-badge">Untuk Diperhatikan</span>
+            <span class="expand-icon">▼</span>
+            <div class="expandable-content">
+              <div class="consideration-item">
+                <div class="consideration-title">System Complexity</div>
+                <p>Problem: Kompleksitas manajemen berbagai model pricing</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Automated billing system</li>
+                    <li>Integrated management dashboard</li>
+                    <li>Clear documentation</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Support Requirements</div>
+                <p>Problem: Increased support complexity</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Tiered support system</li>
+                    <li>Self-service tools</li>
+                    <li>Knowledge base</li>
+                    <li>Automated support workflows</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="consideration-item">
+                <div class="consideration-title">Sales Process</div>
+                <p>Problem: Kompleksitas dalam proses sales</p>
+                <div class="mitigation-list">
+                  <ul>
+                    <li>Sales enablement tools</li>
+                    <li>Standardized pricing calculator</li>
+                    <li>Clear proposal templates</li>
+                    <li>Training program untuk sales team</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script>
+      // Add interaction for expandable sections
+      document.addEventListener('DOMContentLoaded', function () {
+        const expandableSections = document.querySelectorAll('.expandable-section');
+
+        expandableSections.forEach((section) => {
+          section.setAttribute('role', 'button');
+          section.setAttribute('aria-expanded', 'false');
+
+          section.addEventListener('click', function (e) {
+            // Prevent clicks on children from triggering expand/collapse
+            if (e.target !== this && !e.target.matches('.section-badge, .expand-icon')) {
+              return;
+            }
+
+            const content = this.querySelector('.expandable-content');
+            const isExpanded = content.classList.toggle('expanded');
+            this.classList.toggle('expanded');
+
+            // Update accessibility attributes
+            this.setAttribute('aria-expanded', isExpanded);
+          });
+        });
+      });
+    </script>
   </body>
 </html>

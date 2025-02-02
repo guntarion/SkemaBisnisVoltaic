@@ -85,12 +85,19 @@
         color: var(--primary);
       }
 
+      h5 {
+        margin: 0;
+        font-size: 0.875rem;
+        color: var(--neutral);
+        font-weight: normal;
+      }
+
       .section {
         margin: 1.25rem 0;
       }
 
       .section-title {
-        font-weight: 600;
+        font-weight: 700;
         color: var(--neutral);
         margin-bottom: 0.5rem;
         font-size: 0.875rem;
@@ -149,6 +156,31 @@
         font-size: 0.875rem;
       }
 
+      .cost-table {
+        width: 100%;
+        margin: 1rem 0;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+      }
+
+      .cost-table th,
+      .cost-table td {
+        padding: 0.75rem;
+        border: 1px solid #e5e7eb;
+        text-align: left;
+      }
+
+      .cost-table th {
+        background: var(--primary-light);
+        color: var(--primary);
+      }
+
+      .price-tag {
+        font-family: monospace;
+        font-weight: 600;
+        color: var(--primary);
+      }
+
       .note-box {
         background: var(--primary-light);
         padding: 1rem;
@@ -161,6 +193,42 @@
         color: var(--primary);
         margin-bottom: 0.5rem;
       }
+
+      .tag {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        border-radius: 9999px;
+        font-size: 0.75rem;
+        font-weight: 500;
+        margin: 0.25rem;
+      }
+
+      .feature-high {
+        background: var(--success-light);
+        color: var(--success);
+      }
+
+      .feature-medium {
+        background: var(--warning-light);
+        color: var(--warning);
+      }
+
+      ul {
+        margin: 0.5rem 0;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+
+      .margin-info {
+        font-size: 0.75rem;
+        color: var(--neutral);
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
     </style>
   </head>
   <body>
@@ -168,48 +236,147 @@
       <h1>Opsi Deployment SaaS Enterprise</h1>
 
       <div class="options-grid">
+        <!-- Full Cloud with Third Party AI -->
         <div class="option-card">
           <div class="option-header">
-            <div class="icon-container">☁️</div>
-            <h2>Full Cloud</h2>
+            <div class="icon-container">🌐</div>
+            <h2>Full Cloud dg API Model AI Pihak Ketiga</h2>
           </div>
 
           <div class="section">
-            <div class="section-title">Karakteristik</div>
-            <ul>
-              <li>Semua komponen di cloud (aplikasi, data, AI)</li>
-              <li>Menggunakan managed services</li>
-              <li>Data center bisa dipilih per region</li>
-            </ul>
+            <div class="section-title">Biaya Setup Awal</div>
+            <table class="cost-table">
+              <tr>
+                <th>Komponen</th>
+                <th>Biaya</th>
+              </tr>
+              <tr>
+                <td>License Setup & Initial Configuration</td>
+                <td class="price-tag">Rp 50.000.000</td>
+              </tr>
+              <tr>
+                <td>Integration & Customization</td>
+                <td class="price-tag">Rp 25.000.000 - 75.000.000</td>
+              </tr>
+            </table>
           </div>
 
           <div class="section">
-            <div class="section-title">Best For</div>
-            <ul>
-              <li>Startup dan SME</li>
-              <li>Data non-sensitif</li>
-              <li>Kebutuhan scaling cepat</li>
-            </ul>
+            <div class="section-title">Biaya Operasional Bulanan</div>
+            <table class="cost-table">
+              <tr>
+                <th>Paket</th>
+                <th>Subscription</th>
+                <th>AI Credits</th>
+              </tr>
+              <tr>
+                <td>Small (≤50 users)</td>
+                <td class="price-tag">Rp 15.000.000</td>
+                <td class="price-tag">Rp 10.000.000</td>
+              </tr>
+              <tr>
+                <td>Medium (51-200 users)</td>
+                <td class="price-tag">Rp 25.000.000</td>
+                <td class="price-tag">Rp 20.000.000</td>
+              </tr>
+              <tr>
+                <td>Enterprise (>200 users)</td>
+                <td colspan="2" class="price-tag">Custom pricing</td>
+              </tr>
+            </table>
+            <div class="margin-info">Margin: Setup (30-40%), Subscription (25-35%), AI Credits (15-20%)</div>
           </div>
 
           <div class="section">
-            <div class="section-title">Considerations</div>
+            <div class="section-title">Keunggulan</div>
             <ul>
-              <li>Cost predictable tapi bisa tinggi</li>
-              <li>Ketergantungan pada provider</li>
-              <li>Potential compliance issues</li>
+              <li>Time-to-market lebih cepat</li>
+              <li>Biaya awal lebih rendah</li>
+              <li>Maintenance lebih sederhana</li>
+              <li>Model AI selalu up-to-date</li>
             </ul>
           </div>
 
-          <span class="tag security-medium">Security: Medium</span>
-          <span class="tag security-high">Scalability: High</span>
-          <span class="tag security-high">Maintenance: Easy</span>
+          <span class="tag feature-high">Scalability: High</span>
+          <span class="tag feature-high">Time-to-Market: Fast</span>
+          <span class="tag feature-medium">Cost Control: Medium</span>
+        </div>
+
+        <!-- Full Cloud with Self-Managed AI -->
+        <div class="option-card">
+          <div class="option-header">
+            <div class="icon-container">🚀</div>
+            <h2>Full Cloud dg Model AI Mandiri</h2>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Biaya Setup Awal</div>
+            <table class="cost-table">
+              <tr>
+                <th>Komponen</th>
+                <th>Biaya</th>
+              </tr>
+              <tr>
+                <td>License & Configuration</td>
+                <td class="price-tag">Rp 50.000.000</td>
+              </tr>
+              <tr>
+                <td>AI Infrastructure Setup</td>
+                <td class="price-tag">Rp 75.000.000</td>
+              </tr>
+              <tr>
+                <td>Model Training & Tuning</td>
+                <td class="price-tag">Rp 50.000.000</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Biaya Operasional Bulanan</div>
+            <table class="cost-table">
+              <tr>
+                <th>Paket</th>
+                <th>Subscription</th>
+                <th>AI Resources</th>
+              </tr>
+              <tr>
+                <td>Small</td>
+                <td class="price-tag">Rp 20.000.000</td>
+                <td class="price-tag">Rp 15.000.000</td>
+              </tr>
+              <tr>
+                <td>Medium</td>
+                <td class="price-tag">Rp 35.000.000</td>
+                <td class="price-tag">Rp 25.000.000</td>
+              </tr>
+              <tr>
+                <td>Enterprise</td>
+                <td colspan="2" class="price-tag">Custom pricing</td>
+              </tr>
+            </table>
+            <div class="margin-info">Margin: Setup (35-45%), Subscription (30-40%), AI Resources (25-30%)</div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">Keunggulan</div>
+            <ul>
+              <li>Kontrol penuh atas model AI</li>
+              <li>Biaya operasional lebih terprediksi</li>
+              <li>Customization model lebih fleksibel</li>
+              <li>Tidak bergantung pada API pihak ketiga</li>
+            </ul>
+          </div>
+
+          <span class="tag feature-high">Control: High</span>
+          <span class="tag feature-medium">Time-to-Market: Medium</span>
+          <span class="tag feature-high">Cost Predictability: High</span>
         </div>
 
         <div class="option-card">
           <div class="option-header">
             <div class="icon-container">🏢</div>
             <h2>Full On-Premise</h2>
+            <h5>Not Prefereable</h5>
           </div>
 
           <div class="section">
@@ -248,6 +415,7 @@
           <div class="option-header">
             <div class="icon-container">🔄</div>
             <h2>Hybrid Deployment</h2>
+            <h5>Not Prefereable</h5>
           </div>
 
           <div class="section">

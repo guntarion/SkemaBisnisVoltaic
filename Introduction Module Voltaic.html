@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voltaic AI Modules</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/2.3.0/alpine.js"></script>
+    <style>
+      .gradient-bg {
+        background: linear-gradient(120deg, #1a365d 0%, #2d3748 100%);
+      }
+      .module-card {
+        transition: transform 0.3s ease;
+      }
+      .module-card:hover {
+        transform: translateY(-5px);
+      }
+      .ai-persona-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="container">
+      <!-- Hero Section -->
+      <header class="gradient-bg text-white py-24">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col items-center text-center">
+            <h1 class="text-6xl font-extrabold mb-6 tracking-tight">Voltaic AI</h1>
+            <p class="text-2xl mb-8 font-semibold">Platform Manajemen Inovasi Berbasis AI</p>
+            <div class="w-20 h-1 bg-blue-500 mb-10"></div>
+            <p class="text-xl max-w-3xl leading-relaxed">
+              "Inovasi harus didorong oleh masalah dan peluang nyata, bukan dibatasi oleh persyaratan dokumentasi"
+            </p>
+          </div>
+        </div>
+      </header>
+      <!-- Navigation -->
+      <nav class="sticky top-0 bg-white shadow-md z-50">
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4">
+            <div class="text-xl font-bold text-blue-900">Voltaic AI</div>
+            <div class="space-x-6">
+              <a href="#problem-space" class="text-gray-600 hover:text-white">Problem Space</a>
+              <a href="#solution-space" class="text-gray-600 hover:text-white">Solution Space</a>
+              <a href="#business-analysis" class="text-gray-600 hover:text-white">Business Analysis</a>
+              <a href="#makalah-inovasi" class="text-gray-600 hover:text-white">Makalah Inovasi</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Module Grid Overview -->
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Problem Space Card -->
+          <div class="module-card bg-white rounded-lg shadow-lg p-6">
+            <div class="text-4xl mb-4">🔍</div>
+            <h3 class="text-xl font-bold mb-2">Problem Space</h3>
+            <p class="text-gray-600">Identifikasi dan dokumentasi masalah secara terstruktur dengan bantuan AI</p>
+          </div>
+          <!-- Other module cards with placeholder content -->
+          <div class="module-card bg-white rounded-lg shadow-lg p-6">
+            <div class="text-4xl mb-4">💡</div>
+            <h3 class="text-xl font-bold mb-2">Solution Space</h3>
+            <p class="text-gray-600">Pengembangan solusi inovatif dengan panduan AI</p>
+          </div>
+          <div class="module-card bg-white rounded-lg shadow-lg p-6">
+            <div class="text-4xl mb-4">📊</div>
+            <h3 class="text-xl font-bold mb-2">Business Analysis</h3>
+            <p class="text-gray-600">Analisis dampak bisnis dan kelayakan solusi</p>
+          </div>
+          <div class="module-card bg-white rounded-lg shadow-lg p-6">
+            <div class="text-4xl mb-4">📝</div>
+            <h3 class="text-xl font-bold mb-2">Makalah Inovasi</h3>
+            <p class="text-gray-600">Generasi dokumen inovasi otomatis</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problem Space Module Detail -->
+      <section id="problem-space" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Problem Space Module</h2>
+
+          <!-- Introduction -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Pendahuluan</h3>
+            <div class="bg-blue-50 rounded-lg p-6">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Problem Space module adalah sistem penangkapan inovasi berbasis AI yang dirancang khusus untuk karyawan PLN Group dalam
+                mengartikulasikan tantangan tempat kerja secara efektif. Modul ini merepresentasikan pergeseran paradigma dalam identifikasi masalah
+                dengan memisahkan artikulasi masalah dari pencarian solusi.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI Personas -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Asisten AI Multi-Persona</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <!-- Pak Waskito -->
+              <div class="ai-persona-card bg-white rounded-lg shadow-lg p-6">
+                <div class="text-4xl mb-4">👨‍💼</div>
+                <h4 class="text-xl font-bold mb-2">Pak Waskito</h4>
+                <p class="text-gray-600">Spesialis analisis teknis dengan pendekatan detail dan mendalam</p>
+              </div>
+              <!-- Mbak Dewi -->
+              <div class="ai-persona-card bg-white rounded-lg shadow-lg p-6">
+                <div class="text-4xl mb-4">👩‍💼</div>
+                <h4 class="text-xl font-bold mb-2">Mbak Dewi</h4>
+                <p class="text-gray-600">Mentor suportif yang membantu pengguna pemula</p>
+              </div>
+              <!-- Mas Joko -->
+              <div class="ai-persona-card bg-white rounded-lg shadow-lg p-6">
+                <div class="text-4xl mb-4">👨‍🔧</div>
+                <h4 class="text-xl font-bold mb-2">Mas Joko</h4>
+                <p class="text-gray-600">Ahli operasional dengan pendekatan praktis</p>
+              </div>
+              <!-- Bang Rudi -->
+              <div class="ai-persona-card bg-white rounded-lg shadow-lg p-6">
+                <div class="text-4xl mb-4">👨‍🎨</div>
+                <h4 class="text-xl font-bold mb-2">Bang Rudi</h4>
+                <p class="text-gray-600">Fasilitator kreatif untuk analisis masalah yang inovatif</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-16" x-data="{ open: false }">
+            <button @click="open = !open" class="flex items-center justify-between w-full bg-blue-100 p-4 rounded-lg mb-4">
+              <h3 class="text-2xl font-semibold">Fitur Utama</h3>
+              <span class="text-xl" x-text="open ? '−' : '+'"></span>
+            </button>
+            <div x-show="open" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- Structured Documentation -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Dokumentasi Terstruktur</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Input terpandu untuk judul masalah
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Deskripsi detail kejadian
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Format konsisten antar submission
+                  </li>
+                </ul>
+              </div>
+              <!-- Voice Features -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Fitur Suara</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Respons AI dalam format teks dan suara
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Suara khusus untuk setiap karakter
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Interaksi lebih engaging
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Employee Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Karyawan</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Beban kognitif berkurang dengan pemisahan identifikasi masalah dan solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Beragam persona AI yang sesuai dengan preferensi komunikasi berbeda
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Interaksi berbasis suara untuk memudahkan penggunaan di lapangan
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Panduan terstruktur mencegah terlewatnya aspek penting
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Umpan balik real-time membantu mengartikulasikan masalah dengan lebih jelas
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Tidak ada tekanan untuk segera memberikan solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dokumentasi masalah operasional yang mudah
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengembangan profesional melalui peningkatan kemampuan artikulasi masalah
+                </li>
+              </ul>
+            </div>
+            <!-- Management Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Manajemen</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dokumentasi masalah terstandar di seluruh organisasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Data dampak masalah yang terukur untuk pengambilan keputusan
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Visibilitas yang jelas terhadap tantangan operasional lintas departemen
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Kemampuan prioritisasi berbasis data
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Alokasi sumber daya yang lebih baik berdasarkan skala dan dampak masalah
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Sistem peringatan dini untuk masalah yang muncul
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Identifikasi pola masalah lintas departemen
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dasar objektif untuk inisiatif perbaikan
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dukungan perhitungan ROI melalui kuantifikasi dampak
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Technical Details -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-semibold mb-6">Informasi Teknis</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Integrasi Teknis</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Integrasi MongoDB</li>
+                  <li>• Skema fleksibel</li>
+                  <li>• Validasi data built-in</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Fitur Skalabilitas</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Support file attachment</li>
+                  <li>• Tracking versi</li>
+                  <li>• Status monitoring</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Potensi Masa Depan</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Analisis tren</li>
+                  <li>• Integrasi end-to-end</li>
+                  <li>• Machine learning</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placeholder sections for other modules -->
+      <section id="solution-space" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Solution Space Module</h2>
+
+          <!-- Introduction -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Pendahuluan</h3>
+            <div class="bg-blue-50 rounded-lg p-6">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Modul Solution Space adalah sistem pengembangan solusi berbasis AI yang mentransformasi masalah teridentifikasi menjadi solusi
+                terstruktur dan layak. Modul ini merepresentasikan pendekatan sistematis untuk pengembangan inovasi, di mana AI memandu pengguna
+                melalui analisis akar masalah, penilaian kapabilitas, dan generasi solusi dengan mempertimbangkan kesiapan organisasi dan kelayakan
+                implementasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI Integration -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Integrasi AI</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">🔍</div>
+                <h4 class="font-semibold mb-4">Analisis Multi-Metode</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Why-because analysis</li>
+                  <li>• Five-whys analysis</li>
+                  <li>• Fishbone analysis</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">📊</div>
+                <h4 class="font-semibold mb-4">Penilaian Kapabilitas</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Evaluasi kesiapan organisasi</li>
+                  <li>• Analisis kelayakan</li>
+                  <li>• Penilaian risiko</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">💡</div>
+                <h4 class="font-semibold mb-4">Generasi Solusi</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Lima tipe solusi berbeda</li>
+                  <li>• Rekomendasi peningkatan</li>
+                  <li>• Analisis sinergi solusi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-16" x-data="{ open: false }">
+            <button @click="open = !open" class="flex items-center justify-between w-full bg-blue-100 p-4 rounded-lg mb-4">
+              <h3 class="text-2xl font-semibold">Fitur Utama</h3>
+              <span class="text-xl" x-text="open ? '−' : '+'"></span>
+            </button>
+            <div x-show="open" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Comprehensive Root Cause Analysis -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Analisis Akar Masalah Komprehensif</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Multiple metodologi analisis
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Proses analisis dipandu AI
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Generasi kesimpulan kunci
+                  </li>
+                </ul>
+              </div>
+              <!-- Organizational Capability Assessment -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Penilaian Kapabilitas Organisasi</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Evaluasi kesiapan terstruktur
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Analisis ketersediaan sumber daya
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Penilaian kelayakan timeline
+                  </li>
+                </ul>
+              </div>
+              <!-- Multi-perspective Solution Generation -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Generasi Solusi Multi-perspektif</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Lima tipe solusi (Proses, Teknis, SDM, Strategis, Struktural)
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Multiple solusi per tipe
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Area fokus spesifik industri
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Employee Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Karyawan</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pendekatan terstruktur untuk pengembangan solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Panduan AI mengurangi kompleksitas analisis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Multiple perspektif solusi mendorong kreativitas
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penilaian kapabilitas mencegah solusi tidak realistis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pemahaman jelas tentang kebutuhan solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Peningkatan keterampilan pengembangan solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dokumentasi proses pemikiran solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengembangan profesional melalui analisis dipandu AI
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Peluang pengakuan melalui kontribusi solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengalaman pengembangan solusi lintas fungsi
+                </li>
+              </ul>
+            </div>
+            <!-- Management Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Manajemen</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengembangan portofolio solusi komprehensif
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penilaian kelayakan solusi berbasis data
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pandangan jelas tentang kapabilitas organisasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penyelarasan solusi strategis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Optimasi sumber daya melalui sinergi solusi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Mitigasi risiko melalui analisis menyeluruh
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penilaian kesiapan implementasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Manajemen pipeline inovasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Koordinasi solusi lintas departemen
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Proyeksi ROI untuk investasi solusi
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-semibold mb-6">Informasi Tambahan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Integrasi Teknis</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Integrasi MongoDB untuk tracking solusi</li>
+                  <li>• Skema terstruktur untuk dokumentasi</li>
+                  <li>• Kontrol versi komprehensif</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Framework Pengembangan</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Lima tipe solusi berbeda</li>
+                  <li>• Multiple area fokus inovasi</li>
+                  <li>• Integrasi penilaian kapabilitas</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Potensi Masa Depan</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Machine learning untuk pengenalan pola</li>
+                  <li>• Analisis prediktif kesuksesan solusi</li>
+                  <li>• Pengembangan basis pengetahuan</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="business-analysis" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Business Analysis Module</h2>
+
+          <!-- Introduction -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Pendahuluan</h3>
+            <div class="bg-blue-50 rounded-lg p-6">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Modul Business Analysis adalah sistem berbasis AI canggih yang mentransformasi ide inovasi menjadi analisis bisnis komprehensif. Modul
+                ini secara sistematis mengevaluasi potensi bisnis melalui berbagai kerangka analitis, memberikan wawasan mendalam tentang kelayakan
+                pasar, posisi kompetitif, dan strategi implementasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- AI Integration -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Integrasi AI</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">📊</div>
+                <h4 class="font-semibold mb-4">Analisis Multi-Framework</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• SWOT Analysis</li>
+                  <li>• Business Model Canvas</li>
+                  <li>• Porter's Five Forces</li>
+                  <li>• PESTEL Analysis</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">🎯</div>
+                <h4 class="font-semibold mb-4">Analisis Pasar</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Penilaian ukuran pasar</li>
+                  <li>• Analisis kompetitor</li>
+                  <li>• Identifikasi tren</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">⚡</div>
+                <h4 class="font-semibold mb-4">Strategi</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Posisi strategis</li>
+                  <li>• Go-to-market</li>
+                  <li>• Implementasi</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <div class="text-3xl mb-4">⚖️</div>
+                <h4 class="font-semibold mb-4">Penilaian</h4>
+                <ul class="space-y-2 text-gray-600">
+                  <li>• Risiko dan peluang</li>
+                  <li>• Sintesis insight</li>
+                  <li>• Rekomendasi</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-16" x-data="{ open: false }">
+            <button @click="open = !open" class="flex items-center justify-between w-full bg-blue-100 p-4 rounded-lg mb-4">
+              <h3 class="text-2xl font-semibold">Fitur Utama</h3>
+              <span class="text-xl" x-text="open ? '−' : '+'"></span>
+            </button>
+            <div x-show="open" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Market Analysis -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Analisis Pasar Komprehensif</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Overview dan segmentasi pasar
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Penilaian lanskap kompetitif
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Identifikasi tren pasar
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Kalkulasi ukuran pasar
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Evaluasi potensi pertumbuhan
+                  </li>
+                </ul>
+              </div>
+              <!-- Implementation Planning -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Perencanaan Implementasi</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Pengembangan strategi go-to-market
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Perencanaan timeline dan milestone
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Estimasi budget dan alokasi sumber daya
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Definisi KPI dan penilaian risiko
+                  </li>
+                </ul>
+              </div>
+              <!-- Integration Features -->
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Fitur Integrasi</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Koneksi dengan Solution Space
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Aliran data antar framework
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Tampilan dashboard terpadu
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Employee Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Karyawan</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pendekatan terstruktur untuk analisis bisnis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Panduan AI mengurangi kompleksitas analisis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pembelajaran framework analisis profesional
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengembangan wawasan bisnis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dokumentasi proses analisis yang jelas
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Perspektif analitis beragam
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Umpan balik dan saran AI real-time
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Generasi analisis berbasis template
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Pengembangan pengetahuan lintas fungsi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Portofolio kasus bisnis yang dianalisis
+                </li>
+              </ul>
+            </div>
+            <!-- Management Benefits -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Manajemen</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Analisis bisnis terstandar di seluruh organisasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Dukungan keputusan berbasis data
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penilaian risiko komprehensif
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Verifikasi keselarasan strategis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Kejelasan kebutuhan sumber daya
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Visibilitas roadmap implementasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Kapabilitas analisis portofolio
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Kontrol kualitas melalui standardisasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Manajemen dan retensi pengetahuan
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Framework pelatihan dan pengembangan
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Additional Information -->
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h3 class="text-2xl font-semibold mb-6">Informasi Tambahan</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Arsitektur Teknis</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Integrasi MongoDB</li>
+                  <li>• Dukungan kolaborasi real-time</li>
+                  <li>• Sistem kontrol versi</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Integrasi Framework</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Sintesis data lintas framework</li>
+                  <li>• Terminologi dan metrik konsisten</li>
+                  <li>• Tools visualisasi terintegrasi</li>
+                </ul>
+              </div>
+              <div class="bg-white rounded p-4">
+                <h4 class="font-semibold mb-2">Potensi Masa Depan</h4>
+                <ul class="text-sm text-gray-600 space-y-2">
+                  <li>• Prediksi tren pasar</li>
+                  <li>• Integrasi competitive intelligence</li>
+                  <li>• Perbandingan benchmark industri</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="makalah-inovasi" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12">Modul Makalah Inovasi</h2>
+
+          <!-- Introduction -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-semibold mb-6">Pendahuluan</h3>
+            <div class="bg-blue-50 rounded-lg p-6">
+              <p class="text-gray-700 leading-relaxed mb-4">
+                Modul Makalah Inovasi mengotomatisasi proses penyusunan dokumentasi inovasi dengan bantuan AI. Modul ini mengintegrasikan semua
+                informasi dari modul-modul sebelumnya untuk menghasilkan makalah yang terstruktur dan profesional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Key Features -->
+          <div class="mb-16" x-data="{ open: false }">
+            <button @click="open = !open" class="flex items-center justify-between w-full bg-blue-100 p-4 rounded-lg mb-4">
+              <h3 class="text-2xl font-semibold">Fitur Utama</h3>
+              <span class="text-xl" x-text="open ? '−' : '+'"></span>
+            </button>
+            <div x-show="open" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Generasi Konten</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Template makalah otomatis
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Integrasi data lintas modul
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Formatting otomatis
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white rounded-lg shadow p-6">
+                <h4 class="text-xl font-semibold mb-4">Manajemen Dokumen</h4>
+                <ul class="space-y-2 text-gray-700">
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Versioning dokumen
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Kolaborasi tim
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-500 mr-2">•</span>
+                    Export multi-format
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefits -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Karyawan</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Penghematan waktu dokumentasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Kualitas dokumen konsisten
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Fokus pada konten, bukan format
+                </li>
+              </ul>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-6">
+              <h3 class="text-2xl font-semibold mb-6">Manfaat untuk Manajemen</h3>
+              <ul class="space-y-3 text-gray-700">
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Standarisasi dokumentasi
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Peningkatan kualitas output
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-500 mr-2">✓</span>
+                  Manajemen pengetahuan efektif
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth',
+            });
+          });
+        });
+      </script>
+    </div>
+  </body>
+</html>

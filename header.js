@@ -5,35 +5,32 @@
  * Initialize navigation header
  */
 function initHeader() {
-  const header = document.createElement('header');
-  header.className = 'site-header';
+  const header = document.createElement('nav');
+  header.className = 'header-nav';
 
-  // Create logo container
-  const logo = document.createElement('div');
+  // Create logo link
+  const logo = document.createElement('a');
+  logo.href = 'index.html';
   logo.className = 'logo';
-  logo.innerHTML = `
-    <img src="voltaic.png" alt="Voltaic Innovation Logo" />
-    <span>Voltaic Innovation Platform</span>
-  `;
+  logo.innerHTML = 'Voltaic Innovation';
 
-  // Create navigation menu
-  const nav = document.createElement('nav');
-  nav.innerHTML = `
-    <ul>
-      <li><a href="index.html">Home</a></li>
-    </ul>
+  // Create navigation links
+  const navLinks = document.createElement('div');
+  navLinks.className = 'nav-links';
+  navLinks.innerHTML = `
+    <a href="index.html" class="nav-home">Home</a>
   `;
 
   // Add elements to header
   header.appendChild(logo);
-  header.appendChild(nav);
+  header.appendChild(navLinks);
 
   // Insert header at top of body
   document.body.insertBefore(header, document.body.firstChild);
 
   // Add active class to current page
   const currentPage = window.location.pathname.split('/').pop();
-  const links = nav.querySelectorAll('a');
+  const links = header.querySelectorAll('.nav-links a');
   links.forEach((link) => {
     if (link.getAttribute('href') === currentPage) {
       link.classList.add('active');

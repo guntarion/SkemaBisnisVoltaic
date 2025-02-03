@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Komparasi Deployment</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c5282;
+        margin-top: 2em;
+      }
+
+      h1 {
+        text-align: center;
+        border-bottom: 2px solid #2c5282;
+        padding-bottom: 10px;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      th {
+        background-color: #2c5282;
+        color: white;
+        padding: 12px;
+        text-align: left;
+      }
+
+      td {
+        padding: 12px;
+        border: 1px solid #e2e8f0;
+      }
+
+      tr:nth-child(even) {
+        background-color: #ebf8ff;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
+      tr:hover {
+        background-color: #e6fffa;
+      }
+
+      .advantages {
+        background-color: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      .considerations {
+        background-color: #f7fafc;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px 0;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 20px;
+      }
+
+      ul li:before {
+        content: '•';
+        color: #2c5282;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Perbandingan Model Deployment Cloud untuk Voltaic AI</h1>
+
+      <h2>Biaya Setup Awal (Satu Kali)</h2>
+      <table>
+        <tr>
+          <th>Aspek</th>
+          <th>A. Model API AI Pihak Ketiga</th>
+          <th>B. Model AI Mandiri</th>
+        </tr>
+        <tr>
+          <td>Lisensi Dasar & Konfigurasi</td>
+          <td>Rp 50.000.000</td>
+          <td>Rp 50.000.000</td>
+        </tr>
+        <tr>
+          <td>Integrasi & Kustomisasi</td>
+          <td>Rp 25.000.000 - 75.000.000</td>
+          <td>Rp 25.000.000 - 75.000.000</td>
+        </tr>
+        <tr>
+          <td>Setup Infrastruktur AI</td>
+          <td>Tidak Diperlukan</td>
+          <td>Rp 75.000.000</td>
+        </tr>
+        <tr>
+          <td>Pelatihan & Penyesuaian Model AI</td>
+          <td>Tidak Diperlukan</td>
+          <td>Rp 50.000.000</td>
+        </tr>
+        <tr>
+          <td><strong>Total Investasi Awal</strong></td>
+          <td><strong>Rp 75.000.000 - 125.000.000</strong></td>
+          <td><strong>Rp 200.000.000 - 250.000.000</strong></td>
+        </tr>
+      </table>
+
+      <h2>Biaya Operasional Bulanan</h2>
+
+      <h3>Langganan Dasar (Bulanan)</h3>
+      <table>
+        <tr>
+          <th>Tingkat Pengguna</th>
+          <th>A. Model API AI Pihak Ketiga</th>
+          <th>B. Model AI Mandiri</th>
+        </tr>
+        <tr>
+          <td>Kecil (≤50 pengguna)</td>
+          <td>Rp 15.000.000</td>
+          <td>Rp 20.000.000</td>
+        </tr>
+        <tr>
+          <td>Menengah (51-200 pengguna)</td>
+          <td>Rp 25.000.000</td>
+          <td>Rp 35.000.000</td>
+        </tr>
+        <tr>
+          <td>Enterprise (>200)</td>
+          <td>Harga khusus</td>
+          <td>Harga khusus</td>
+        </tr>
+      </table>
+
+      <h3>Biaya Penggunaan/Sumber Daya AI (Bulanan)</h3>
+      <table>
+        <tr>
+          <th>Tingkat Penggunaan</th>
+          <th>A. Model API AI Pihak Ketiga</th>
+          <th>B. Model AI Mandiri</th>
+        </tr>
+        <tr>
+          <td>Dasar</td>
+          <td>Rp 10.000.000 (~1000 dokumen)</td>
+          <td>Rp 15.000.000</td>
+        </tr>
+        <tr>
+          <td>Profesional</td>
+          <td>Rp 20.000.000 (~2500 dokumen)</td>
+          <td>Rp 25.000.000</td>
+        </tr>
+        <tr>
+          <td>Enterprise</td>
+          <td>Rp 35.000.000 (tidak terbatas)</td>
+          <td>Rp 45.000.000</td>
+        </tr>
+      </table>
+
+      <h3>Infrastruktur & Pemeliharaan (Bulanan)</h3>
+      <table>
+        <tr>
+          <th>Komponen</th>
+          <th>A. Model API AI Pihak Ketiga</th>
+          <th>B. Model AI Mandiri</th>
+        </tr>
+        <tr>
+          <td>Hosting & Penyimpanan</td>
+          <td>~Rp 1.500.000</td>
+          <td>~Rp 8.500.000</td>
+        </tr>
+        <tr>
+          <td>Biaya AI</td>
+          <td>~Rp 6.000.000 (API)</td>
+          <td>Termasuk dalam infrastruktur</td>
+        </tr>
+        <tr>
+          <td>Dukungan & Pembaruan</td>
+          <td>Rp 5.500.000</td>
+          <td>Rp 18.000.000</td>
+        </tr>
+      </table>
+
+      <h2>Struktur Margin</h2>
+      <table>
+        <tr>
+          <th>Aliran Pendapatan</th>
+          <th>A. Model API AI Pihak Ketiga</th>
+          <th>B. Model AI Mandiri</th>
+        </tr>
+        <tr>
+          <td>Biaya Setup</td>
+          <td>30-40%</td>
+          <td>35-45%</td>
+        </tr>
+        <tr>
+          <td>Langganan Bulanan</td>
+          <td>25-35%</td>
+          <td>30-40%</td>
+        </tr>
+        <tr>
+          <td>Penggunaan/Sumber Daya AI</td>
+          <td>15-20%</td>
+          <td>25-30%</td>
+        </tr>
+      </table>
+
+      <h2>Ringkasan Perbedaan Utama</h2>
+
+      <div class="advantages">
+        <h3>Keunggulan Model A (API AI Pihak Ketiga)</h3>
+        <ul>
+          <li>Investasi awal lebih rendah</li>
+          <li>Kompleksitas teknis lebih rendah</li>
+          <li>Biaya API yang dapat diprediksi</li>
+          <li>Beban pemeliharaan lebih rendah</li>
+          <li>Deployment lebih cepat</li>
+        </ul>
+
+        <h3>Keunggulan Model B (AI Mandiri)</h3>
+        <ul>
+          <li>Kontrol lebih besar atas kemampuan AI</li>
+          <li>Potensi kustomisasi lebih baik</li>
+          <li>Margin keuntungan lebih tinggi</li>
+          <li>Tidak ada batasan penggunaan API</li>
+          <li>Kedaulatan data</li>
+        </ul>
+      </div>
+
+      <div class="considerations">
+        <h3>Pertimbangan</h3>
+        <p><strong>1. Model A lebih cocok untuk:</strong></p>
+        <ul>
+          <li>Kebutuhan deployment cepat</li>
+          <li>Anggaran awal lebih rendah</li>
+          <li>Operasi skala kecil</li>
+          <li>Kapasitas pemeliharaan teknis lebih rendah</li>
+        </ul>
+
+        <p><strong>2. Model B lebih cocok untuk:</strong></p>
+        <ul>
+          <li>Rencana skalabilitas jangka panjang</li>
+          <li>Kebutuhan kontrol lebih tinggi</li>
+          <li>Masalah keamanan data</li>
+          <li>Operasi lebih besar dengan tim teknis</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

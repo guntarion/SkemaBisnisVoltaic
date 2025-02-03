@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Data - Innovation Platform</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for tabs */
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab-button.active {
+        background-color: #e5e7eb;
+        border-bottom: 2px solid #3b82f6;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div class="container mx-auto p-6">
+      <h1 class="text-2xl font-bold mb-6">Sample Data</h1>
+
+      <!-- Tab buttons -->
+      <div class="flex border-b mb-4">
+        <button onclick="showTab('problems')" class="tab-button active px-4 py-2 text-sm font-medium" data-tab="problems">Problem Examples</button>
+        <button onclick="showTab('innovations')" class="tab-button px-4 py-2 text-sm font-medium" data-tab="innovations">Innovation Examples</button>
+        <button onclick="showTab('references')" class="tab-button px-4 py-2 text-sm font-medium" data-tab="references">Reference Examples</button>
+      </div>
+
+      <!-- Tab content container with scrollbar -->
+      <div class="h-[600px] overflow-y-auto border rounded-md p-4">
+        <!-- Problems Tab -->
+        <div id="problems" class="tab-content active space-y-4">
+          <!-- Problem Example 1 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Example 1: Keterlambatan pengadaan spare part pompa boiler feed</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Description:</h4>
+                <p class="text-gray-600">
+                  Prosedur pengadaan spare part pompa boiler feed terlalu lama. Tim operasi sering menunggu berbulan-bulan untuk mendapatkan part yang
+                  dibutuhkan. Kadang harus menggunakan part bekas dulu.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium mb-2">When and Where:</h4>
+                <p class="text-gray-600">Terjadi beberapa kali tahun ini di Unit 3. Terakhir minggu lalu untuk pengadaan mechanical seal.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Example 2 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Example 2: Dokumentasi SOP maintenance kurang jelas</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Description:</h4>
+                <p class="text-gray-600">
+                  SOP maintenance turbin yang ada sekarang membingungkan karena banyak istilah teknis yang tidak dijelaskan. Beberapa langkah prosedur
+                  juga tidak detail. Teknisi baru sering salah interpretasi.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium mb-2">When and Where:</h4>
+                <p class="text-gray-600">Saat maintenance rutin bulanan turbin unit 2.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Example 3 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Example 3: Komunikasi shift handover tidak efektif</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Description:</h4>
+                <p class="text-gray-600">
+                  Informasi penting sering tidak tersampaikan dengan baik saat pergantian shift. Contohnya status equipment yang sedang trouble atau
+                  sedang dalam perbaikan tidak dicatat lengkap di logbook.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium mb-2">When and Where:</h4>
+                <p class="text-gray-600">Di control room, terutama shift malam ke pagi.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Example 4 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Example 4: Lambatnya proses approval anggaran perbaikan emergency</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Description:</h4>
+                <p class="text-gray-600">
+                  Butuh tanda tangan banyak pihak untuk approval anggaran emergency. Padahal equipment perlu segera diperbaiki. Jadi unit harus
+                  derating dulu sambil nunggu approval.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium mb-2">When and Where:</h4>
+                <p class="text-gray-600">Pas kerusakan di conveyor batu bara minggu lalu.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Problem Example 5 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Example 5: Data parameter operasi tidak terekam lengkap</h3>
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Description:</h4>
+                <p class="text-gray-600">
+                  Beberapa sensor di DCS error tapi belum diganti. Operator tulis manual di log sheet tapi sering lupa atau tidak konsisten cara
+                  nulisnya.
+                </p>
+              </div>
+              <div>
+                <h4 class="font-medium mb-2">When and Where:</h4>
+                <p class="text-gray-600">Di CCR Unit 1, untuk parameter temperature metal turbin.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Innovations Tab -->
+        <div id="innovations" class="tab-content space-y-4">
+          <!-- Innovation Example 1 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovation 1: DocTrack Pro - Sistem Manajemen Dokumen Digital Terintegrasi</h3>
+            <p class="text-gray-600 mb-4">
+              Aplikasi berbasis web untuk digitalisasi, tracking dan manajemen dokumen yang terintegrasi dengan sistem existing PLN. Menggunakan
+              teknologi cloud yang aman dan sesuai standar BUMN.
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Dashboard tracking status dokumen real-time</li>
+                  <li>Sistem notifikasi otomatis via email/WhatsApp</li>
+                  <li>Digital signature integration</li>
+                  <li>Pencarian dokumen dengan advanced filter</li>
+                  <li>Integrasi dengan Microsoft Office 365</li>
+                  <li>Role-based access control</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Benefits:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Reduksi waktu pencarian dokumen hingga 80%</li>
+                  <li>Eliminasi dokumen redundan</li>
+                  <li>Tracking status dokumen real-time</li>
+                  <li>Paperless office implementation</li>
+                  <li>Audit trail lengkap</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Quick Wins:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Implementasi bertahap per unit</li>
+                  <li>Training minimal karena familiar dengan interface Office</li>
+                  <li>ROI cepat dari efisiensi operasional</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Innovation Example 2 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovation 2: Smart Archive - Sistem Pengarsipan Hybrid</h3>
+            <p class="text-gray-600 mb-4">
+              Solusi pengarsipan yang mengkombinasikan sistem digital dengan physical storage yang terorganisir. Mencakup sistem barcode untuk dokumen
+              fisik yang terintegrasi dengan database digital.
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Sistem barcode untuk dokumen fisik</li>
+                  <li>Mobile app untuk scan & track</li>
+                  <li>Mapping lokasi dokumen fisik</li>
+                  <li>Sistem kategorisasi otomatis</li>
+                  <li>Backup system terintegrasi</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Benefits:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Transisi smooth dari sistem manual ke digital</li>
+                  <li>Kemudahan akses dokumen fisik & digital</li>
+                  <li>Sistem backup yang aman</li>
+                  <li>Reduce storage space hingga 40%</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Quick Wins:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Implementasi cepat dengan existing infrastructure</li>
+                  <li>Minimal resistance karena tetap akomodasi cara kerja konvensional</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Innovation Example 3 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovation 3: AutoDoc Flow - Workflow Automation System</h3>
+            <p class="text-gray-600 mb-4">
+              Sistem otomatisasi alur kerja dokumen dengan template standar dan approval workflow digital yang terintegrasi dengan sistem existing
+              PLN.
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Template dokumen standar</li>
+                  <li>Automated workflow routing</li>
+                  <li>Digital approval system</li>
+                  <li>Progress tracking dashboard</li>
+                  <li>Integration with existing ERP</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Benefits:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Standarisasi proses dokumentasi</li>
+                  <li>Percepatan proses approval 60%</li>
+                  <li>Eliminasi bottleneck proses</li>
+                  <li>Transparansi proses end-to-end</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Quick Wins:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Template ready-to-use</li>
+                  <li>Reduced training needs</li>
+                  <li>Immediate efficiency gains</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Innovation Example 4 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovation 4: MobileDoc - Akses Dokumen Mobile</h3>
+            <p class="text-gray-600 mb-4">
+              Aplikasi mobile untuk akses dan approval dokumen dari mana saja, dengan fitur keamanan yang comply dengan standar BUMN.
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Secure mobile access</li>
+                  <li>Offline capability</li>
+                  <li>Biometric authentication</li>
+                  <li>Document preview & annotation</li>
+                  <li>Push notification system</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Benefits:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Fleksibilitas akses 24/7</li>
+                  <li>Percepatan proses approval</li>
+                  <li>Enhanced user experience</li>
+                  <li>Better work-life balance</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Quick Wins:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Fast deployment via enterprise app store</li>
+                  <li>Familiar mobile interface</li>
+                  <li>Immediate productivity boost</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Innovation Example 5 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="text-lg font-semibold mb-2">Innovation 5: AI-Doc Assistant - Smart Document Processing</h3>
+            <p class="text-gray-600 mb-4">
+              Implementasi AI untuk otomatisasi klasifikasi dokumen, ekstraksi data, dan smart search dengan machine learning capability.
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-medium mb-2">Key Features:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>OCR dengan AI enhancement</li>
+                  <li>Automated document classification</li>
+                  <li>Smart search & retrieval</li>
+                  <li>Pattern recognition</li>
+                  <li>Continuous learning system</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Benefits:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Reduksi waktu processing 70%</li>
+                  <li>Akurasi klasifikasi meningkat</li>
+                  <li>Kemudahan pencarian informasi</li>
+                  <li>Insights dari pattern dokumen</li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="font-medium mb-2">Quick Wins:</h4>
+                <ul class="list-disc pl-5 text-gray-600">
+                  <li>Pilot project untuk dokumen standar</li>
+                  <li>Incremental AI training</li>
+                  <li>Immediate efficiency gains in routine tasks</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- References Tab -->
+        <div id="references" class="tab-content space-y-4">
+          <!-- Reference Example 1 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="font-medium mb-2">Renewable Energy: A Primer for the Twenty-first Century</h3>
+            <p class="text-gray-600 mb-2">By Bruce Usher</p>
+            <p class="text-sm text-gray-500">
+              ISBN:9780231187848, 023118784X, Page count:209, Published:2019, Format:Hardcover, Publisher:Columbia University Press
+            </p>
+          </div>
+
+          <!-- Reference Example 2 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="font-medium mb-2">
+              Assessing machine learning and data imputation approaches to handle the issue of data sparsity in sports forecasting
+            </h3>
+            <p class="text-gray-600 mb-2">
+              Fabian Wunderlich, Henrik Biermann, Weiran Yang, Manuel Bassek, Dominik Raabe, Nico Elbert, Daniel Memmert & Marc Garnica Caparrós
+            </p>
+            <p class="text-sm text-gray-500">
+              Published: 28 January 2025, Volume 114, article number 48, (2025), Part of Special Issue on Machine Learning in Soccer
+            </p>
+          </div>
+
+          <!-- Reference Example 3 -->
+          <div class="bg-white rounded-lg shadow-sm p-4 mb-4">
+            <h3 class="font-medium mb-2">The 7 Steps of Machine Learning</h3>
+            <p class="text-gray-600 mb-2">Yufeng G</p>
+            <p class="text-sm text-gray-500">Published in Towards Data Science, Sep 1, 2017</p>
+            <p class="text-sm text-gray-500">https://medium.com/towards-data-science/the-7-steps-of-machine-learning-2877d7e5548e</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tab switching functionality
+      function showTab(tabId) {
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach((tab) => {
+          tab.classList.remove('active');
+        });
+
+        // Remove active class from all buttons
+        document.querySelectorAll('.tab-button').forEach((button) => {
+          button.classList.remove('active');
+        });
+
+        // Show selected tab content
+        document.getElementById(tabId).classList.add('active');
+
+        // Add active class to clicked button
+        document.querySelector(`[data-tab="${tabId}"]`).classList.add('active');
+      }
+    </script>
+  </body>
+</html>

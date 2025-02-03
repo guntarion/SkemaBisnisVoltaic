@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Struktur Biaya Voltaic AI</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="header.js"></script>
+    <style>
+      :root {
+        --primary: #2563eb;
+        --primary-light: #dbeafe;
+        --success: #059669;
+        --success-light: #d1fae5;
+        --warning: #d97706;
+        --warning-light: #fef3c7;
+        --neutral: #4b5563;
+        --bg-light: #f8fafc;
+      }
+
+      body {
+        font-family: system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: var(--bg-light);
+      }
+
+      .container {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        color: var(--primary);
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .section {
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #e5e7eb;
+      }
+
+      .section h2 {
+        color: var(--primary);
+        border-bottom: 2px solid var(--primary-light);
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      th,
+      td {
+        padding: 0.75rem;
+        border: 1px solid #e5e7eb;
+      }
+
+      th {
+        background: var(--primary-light);
+        color: var(--primary);
+        text-align: left;
+      }
+
+      .note {
+        background: var(--warning-light);
+        padding: 1rem;
+        border-radius: 4px;
+        margin: 1rem 0;
+      }
+
+      .margin-info {
+        color: var(--success);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Struktur Biaya Manajemen Proyek PROXSIS</h1>
+
+      <div class="section">
+        <h2>1. Biaya Setup dan Implementasi (One-time)</h2>
+        <table>
+          <tr>
+            <th>Komponen</th>
+            <th>A. Model API AI Pihak Ketiga</th>
+            <th>B. Model AI Mandiri</th>
+          </tr>
+          <tr>
+            <td>Lisensi & Konfigurasi dari JTB</td>
+            <td>Rp 50 juta</td>
+            <td>Rp 50 juta</td>
+          </tr>
+          <tr>
+            <td>Project Management & Implementation</td>
+            <td>Rp 25-35 juta</td>
+            <td>Rp 35-45 juta</td>
+          </tr>
+          <tr>
+            <td>Training & Documentation</td>
+            <td>Rp 15-25 juta</td>
+            <td>Rp 25-35 juta</td>
+          </tr>
+          <tr>
+            <td>Business Analysis & Customization</td>
+            <td>Rp 20-30 juta</td>
+            <td>Rp 30-40 juta</td>
+          </tr>
+        </table>
+        <div class="margin-info">Margin PROXSIS pada setup: 30-40% dari total nilai proyek</div>
+      </div>
+
+      <div class="section">
+        <h2>2. Biaya Operasional Bulanan</h2>
+        <table>
+          <tr>
+            <th>Layanan</th>
+            <th>Small (≤50 users)</th>
+            <th>Medium (51-200 users)</th>
+            <th>Enterprise (>200)</th>
+          </tr>
+          <tr>
+            <td>Account Management</td>
+            <td>Rp 5-7 juta</td>
+            <td>Rp 8-10 juta</td>
+            <td rowspan="4">Custom</td>
+          </tr>
+          <tr>
+            <td>Support Level 1</td>
+            <td>Rp 8-10 juta</td>
+            <td>Rp 12-15 juta</td>
+          </tr>
+          <tr>
+            <td>Training & Documentation</td>
+            <td>Rp 3-5 juta</td>
+            <td>Rp 5-8 juta</td>
+          </tr>
+          <tr>
+            <td>Monitoring & Reporting</td>
+            <td>Rp 4-6 juta</td>
+            <td>Rp 6-8 juta</td>
+          </tr>
+        </table>
+        <div class="margin-info">Margin operasional PROXSIS: 25-35% dari biaya subscription</div>
+      </div>
+
+      <div class="section">
+        <h2>3. Komponen SDM</h2>
+        <table>
+          <tr>
+            <th>Peran</th>
+            <th>Small</th>
+            <th>Medium</th>
+            <th>Enterprise</th>
+          </tr>
+          <tr>
+            <td>Project Manager</td>
+            <td>0.25 FTE</td>
+            <td>0.5 FTE</td>
+            <td>1 FTE</td>
+          </tr>
+          <tr>
+            <td>Business Analyst</td>
+            <td>0.5 FTE</td>
+            <td>1 FTE</td>
+            <td>2 FTE</td>
+          </tr>
+          <tr>
+            <td>Support Staff L1</td>
+            <td>1 FTE</td>
+            <td>2 FTE</td>
+            <td>3-4 FTE</td>
+          </tr>
+          <tr>
+            <td>Trainer</td>
+            <td>0.25 FTE</td>
+            <td>0.5 FTE</td>
+            <td>1 FTE</td>
+          </tr>
+        </table>
+        <p><small>FTE = Full Time Equivalent</small></p>
+      </div>
+
+      <div class="section">
+        <h2>4. Biaya Training & Workshop</h2>
+        <table>
+          <tr>
+            <th>Jenis Training</th>
+            <th>Biaya per Sesi</th>
+            <th>Kapasitas</th>
+          </tr>
+          <tr>
+            <td>Basic User Training</td>
+            <td>Rp 15-20 juta</td>
+            <td>20-25 peserta</td>
+          </tr>
+          <tr>
+            <td>Advanced User Workshop</td>
+            <td>Rp 25-30 juta</td>
+            <td>15-20 peserta</td>
+          </tr>
+          <tr>
+            <td>Innovation Champion Training</td>
+            <td>Rp 35-40 juta</td>
+            <td>10-15 peserta</td>
+          </tr>
+          <tr>
+            <td>Custom Workshop</td>
+            <td>Rp 40-50 juta</td>
+            <td>Sesuai kebutuhan</td>
+          </tr>
+        </table>
+        <div class="margin-info">Margin training: 35-45% dari biaya per sesi</div>
+      </div>
+
+      <div class="note">
+        <h3>Catatan Penting:</h3>
+        <ul>
+          <li>Struktur biaya bisa disesuaikan berdasarkan kompleksitas implementasi</li>
+          <li>Tambahan biaya mungkin diperlukan untuk customization khusus</li>
+          <li>Enterprise pricing memerlukan assessment khusus</li>
+          <li>Biaya travel dan akomodasi untuk on-site support ditagihkan terpisah</li>
+          <li>SLA premium dapat menambah biaya operasional 15-25%</li>
+        </ul>
+      </div>
+
+      <h1>Struktur Anggaran Voltaic AI - Cloud Deployment Models</h1>
+
+      <!-- Model A: Full Cloud dengan API Model AI Pihak Ketiga -->
+      <div class="section">
+        <h2>A. Full Cloud dengan API Model AI Pihak Ketiga</h2>
+
+        <h3>1. Biaya Setup Awal (One-Time)</h3>
+        <table>
+          <tr>
+            <th colspan="2">Dibayarkan Klien ke Proxsis</th>
+          </tr>
+          <tr>
+            <td>License Setup & Initial Configuration</td>
+            <td>Rp 50,000,000</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li>Aktivasi sistem & konfigurasi awal</li>
+                <li>User setup & role configuration</li>
+                <li>Custom branding & UI adjustments</li>
+                <li>Initial training untuk admin</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Integration & Customization</td>
+            <td>Rp 25,000,000 - Rp 75,000,000</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li>Feature Development</li>
+                <li>Custom workflow setup</li>
+                <li>Data integration (if needed)</li>
+                <li>Security configuration</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <table style="margin-top: 1rem">
+          <tr>
+            <th colspan="2">Dibayarkan Proxsis ke Pengembang</th>
+          </tr>
+          <tr>
+            <td>System Setup</td>
+            <td>Rp 35,000,000</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li>Database initialization</li>
+                <li>Environment configuration</li>
+                <li>Security implementation</li>
+                <li>Initial deployment</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Customization Development</td>
+            <td>Rp 15,000,000 - Rp 50,000,000</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li>Custom features development</li>
+                <li>Integration development</li>
+                <li>Testing & documentation</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <h3>2. Biaya Operasional Bulanan</h3>
+        <table>
+          <tr>
+            <th colspan="2">Dibayarkan Klien ke Proxsis</th>
+          </tr>
+          <tr>
+            <td>Basic Subscription (per bulan)</td>
+            <td>
+              <ul>
+                <li>Small (≤50 users): Rp 15,000,000</li>
+                <li>Medium (51-200 users): Rp 25,000,000</li>
+                <li>Enterprise (>200 users): Custom pricing</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>AI Usage Credits (per bulan)</td>
+            <td>
+              <ul>
+                <li>Basic: Rp 10,000,000 (±1000 dokumen)</li>
+                <li>Professional: Rp 20,000,000 (±2500 dokumen)</li>
+                <li>Enterprise: Rp 35,000,000 (unlimited)</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <table style="margin-top: 1rem">
+          <tr>
+            <th colspan="2">Dibayarkan Proxsis ke Pihak Ketiga & Pengembang</th>
+          </tr>
+          <tr>
+            <td>Infrastructure (per bulan)</td>
+            <td>
+              <ul>
+                <li>Vercel Hosting: $20</li>
+                <li>Database Hosting: $50</li>
+                <li>Document Storage: $30</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>AI API Costs (per bulan)</td>
+            <td>
+              <ul>
+                <li>Claude API: ±Rp 3 juta</li>
+                <li>Gemini API: ± Rp 2 juta</li>
+                <li>Perplexity API: ± Rp 1 juta</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Maintenance & Support ke Pengembang</td>
+            <td>
+              <ul>
+                <li>Basic Support: Rp 2,500,000</li>
+                <li>Technical Updates: Rp 3,000,000</li>
+                <li>Bug Fixes: Included</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <div class="margin-info">
+          Margin Structure:<br />
+          • Setup Fee: 30-40% margin<br />
+          • Monthly Subscription: 25-35% margin<br />
+          • AI Usage Credits: 15-20% margin
+        </div>
+      </div>
+
+      <!-- Model B: Full Cloud dengan Model AI Mandiri -->
+      <div class="section">
+        <h2>B. Full Cloud dengan Model AI Mandiri</h2>
+
+        <h3>1. Biaya Setup Awal (One-Time)</h3>
+        <table>
+          <tr>
+            <th colspan="2">Dibayarkan Klien ke Proxsis</th>
+          </tr>
+          <tr>
+            <td colspan="2">Same as Model A, plus:</td>
+          </tr>
+          <tr>
+            <td>AI Infrastructure Setup</td>
+            <td>Rp 75,000,000</td>
+          </tr>
+          <tr>
+            <td>Model Training & Tuning</td>
+            <td>Rp 50,000,000</td>
+          </tr>
+        </table>
+
+        <table style="margin-top: 1rem">
+          <tr>
+            <th colspan="2">Dibayarkan Proxsis ke Pengembang & Provider</th>
+          </tr>
+          <tr>
+            <td>AI Server Setup</td>
+            <td>Rp 50,000,000</td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <ul>
+                <li>GPU server configuration</li>
+                <li>Model deployment</li>
+                <li>Performance optimization</li>
+                <li>Load balancing setup</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <h3>2. Biaya Operasional Bulanan</h3>
+        <table>
+          <tr>
+            <th colspan="2">Dibayarkan Klien ke Proxsis</th>
+          </tr>
+          <tr>
+            <td>Basic Subscription</td>
+            <td>
+              <ul>
+                <li>Small: Rp 20,000,000</li>
+                <li>Medium: Rp 35,000,000</li>
+                <li>Enterprise: Custom pricing</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>AI Resource Allocation</td>
+            <td>
+              <ul>
+                <li>Basic: Rp 15,000,000</li>
+                <li>Professional: Rp 25,000,000</li>
+                <li>Enterprise: Rp 45,000,000</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <table style="margin-top: 1rem">
+          <tr>
+            <th colspan="2">Dibayarkan Proxsis ke Provider & Pengembang</th>
+          </tr>
+          <tr>
+            <td>Infrastructure</td>
+            <td>
+              <ul>
+                <li>GPU Server: $500/bulan</li>
+                <li>Database: $50/bulan</li>
+                <li>Storage: $30/bulan</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>Maintenance & Support</td>
+            <td>
+              <ul>
+                <li>AI Model Management: Rp 10,000,000</li>
+                <li>System Updates: Rp 5,000,000</li>
+                <li>Performance Monitoring: Rp 3,000,000</li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <div class="margin-info">
+          Margin Structure:<br />
+          • Setup Fee: 35-45% margin<br />
+          • Monthly Subscription: 30-40% margin<br />
+          • AI Resource Allocation: 25-30% margin
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
